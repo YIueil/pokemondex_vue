@@ -4,33 +4,33 @@
       <el-aside style="width: 230px">
         <div class="search">
           <el-input
-            v-if="renderSearcher"
-            autofocus="true"
-            placeholder="输入关键字进行过滤"
-            v-model="filterText"
+              v-if="renderSearcher"
+              autofocus="true"
+              placeholder="输入关键字进行过滤"
+              v-model="filterText"
           >
           </el-input>
         </div>
         <el-scrollbar id="pokedex" :style="{ height: slbHeight }">
           <el-tree
-            class="filter-tree"
-            :data="data"
-            :props="defaultProps"
-            default-expand-all
-            :filter-node-method="filterNode"
-            @node-click="clickNode"
-            ref="tree"
-            v-if="refreshed"
+              class="filter-tree"
+              :data="data"
+              :props="defaultProps"
+              default-expand-all
+              :filter-node-method="filterNode"
+              @node-click="clickNode"
+              ref="tree"
+              v-if="refreshed"
           >
             <div
-              class="custom-tree-node"
-              slot-scope="{ node }"
-              style="display: flex"
+                class="custom-tree-node"
+                slot-scope="{ node }"
+                style="display: flex"
             >
               <img
-                v-if="node.data.bid"
-                v-bind:src="require('./assets/icons/' + node.data.bid + '.png')"
-                style="height: 24px; flex: 0.3"
+                  v-if="node.data.bid"
+                  v-bind:src="require('./assets/icons/' + node.data.bid + '.png')"
+                  style="height: 24px; flex: 0.3"
               />
               <span style="flex: 0.7">
                 {{ node.label }}
@@ -39,22 +39,40 @@
           </el-tree>
         </el-scrollbar>
       </el-aside>
-      <el-main id="content">
-        <el-scrollbar :style="{ height: contentHeight }">
-          <Content :bid="bid" :label="selected_label" v-if="selected" />
-        </el-scrollbar>
-      </el-main>
+      <el-container>
+        <el-main id="content">
+          <el-tabs type="border-card">
+            <el-tab-pane label="基本">
+              <el-scrollbar :style="{ height: contentHeight }">
+                <PokemonCard :bid="bid" :label="selected_label" v-if="selected"/>
+              </el-scrollbar>
+            </el-tab-pane>
+            <el-tab-pane label="技能">
+              <el-scrollbar :style="{ height: contentHeight }">
+                <Skill/>
+              </el-scrollbar>
+            </el-tab-pane>
+            <el-tab-pane label="详情">
+              <el-scrollbar :style="{ height: contentHeight }">
+                <Content :bid="bid" :label="selected_label" v-if="selected"/>
+              </el-scrollbar>
+            </el-tab-pane>
+          </el-tabs>
+        </el-main>
+      </el-container>
     </el-container>
   </div>
 </template>
 
 <script>
-import Content from "./components/Content.vue";
+import Content from "./components/Content/Content.vue";
+import Skill from "./components/Content/Skill.vue";
+import PokemonCard from "@/components/Content/PokemonCard";
 
 export default {
   name: "App",
   data() {
-    const { data } = require("./assets/data/indexes.js");
+    const {data} = require("./assets/data/indexes.js");
     return {
       bid: "001",
       selected_label: "001 妙蛙種子",
@@ -75,10 +93,13 @@ export default {
       alpha_201_sheet: null,
       refreshed: false,
       renderSearcher: true,
+      activeIndex: 1,
     };
   },
   components: {
+    PokemonCard,
     Content,
+    Skill
   },
   methods: {
     filterNode(value, data) {
@@ -131,18 +152,18 @@ export default {
         }
         var img_width = (clientWidth - 230 - 250 - 120) / 7;
         this.alpha_201_sheet.insertRule(
-          "#alpha-201 img{width:" + img_width + "px}"
+            "#alpha-201 img{width:" + img_width + "px}"
         );
       }
 
       this.refreshed = true;
-    },
+    }
   },
   mounted() {
     if (window.utools) {
       this.renderSearcher = false;
       window.utools.onPluginEnter(() => {
-        window.utools.setSubInput(({ text }) => {
+        window.utools.setSubInput(({text}) => {
           console.log(text);
           this.$refs.tree.filter(text);
         });
@@ -150,8 +171,8 @@ export default {
     }
 
     this.changeFixed(
-      `${document.documentElement.clientHeight}`,
-      `${document.documentElement.clientWidth}`
+        `${document.documentElement.clientHeight}`,
+        `${document.documentElement.clientWidth}`
     );
 
     const that = this;
@@ -218,7 +239,7 @@ body {
 }
 #content {
   padding: 0;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
   margin-right: 10px;
 }
