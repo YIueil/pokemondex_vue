@@ -1,39 +1,30 @@
-# vue-project
+# Yiueil's pokedex
+弋孓的`pokemon dex`只是一个兴趣使然开发的一款宝可梦图鉴.
 
-This template should help get you started developing with Vue 3 in Vite.
+#### 基本功能
 
-## Recommended IDE Setup
+#### 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+#### 未来计划
+- [ ] 宝可梦简介
+- [ ] 宝可梦图片 缩略图, 大图, 闪光的样子
+- [ ] 版本图鉴简介
+- [ ] 宝可梦种族值 能力值范围
+- [ ] 宝可梦属性
+- [ ] 宝可梦分类
+- [ ] 宝可梦蛋组
+- [ ] 宝可梦特性
+- [ ] 100级经验值
+- [ ] 全国编号
+- [ ] 努力值
+- [ ] 性别比例
+- [ ] 升级技能和学习机技能
+- [ ] 遗传技能、遗传链
+- [ ] 对战伤害计算
+- [ ] 本地宝可梦队伍创建
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
