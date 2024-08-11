@@ -1,25 +1,39 @@
-# pokemon
+# vue-project
 
-基于 [vue2.0](https://cn.vuejs.org/v2/guide/)
+This template should help get you started developing with Vue 3 in Vite.
 
-### 安装依赖
-```
+## Recommended IDE Setup
+
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Type Support for `.vue` Imports in TS
+
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
 ```
 
-### 本地调试
-```
-npm run serve
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
 ```
 
-### 打包utools文件
-```
-sh install.sh
-```
-会打包到 `./utools_dist/`
+### Type-Check, Compile and Minify for Production
 
-### 宝可梦数据不全？
+```sh
+npm run build
 ```
-python gen.py
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
 ```
-继续拉下数据，我本地还在测试，当前拉取的数据不全
