@@ -1,5 +1,15 @@
 # Yiueil's pokedex
-弋孓的`pokemon dex`只是一个兴趣使然开发的一款宝可梦图鉴.
+弋孓的`pokemon dex`只是一个兴趣使然开发的一款宝可梦图鉴. 使用最新的技术栈 Vue3 + TypeScript + NativeUI + Pinia + Xicons.
+
+> [Vue3](https://cn.vuejs.org/)
+> 
+> [TypeScript](https://www.typescriptlang.org/) Javascript 超集
+> 
+> [NativeUI](https://github.com/tusen-ai/naive-ui) UI组件库
+> 
+> [Pinia](https://github.com/vuejs/pinia) 全局状态管理库
+> 
+> [Xicons](https://github.com/07akioni/xicons) 聚合图标库
 
 #### 基本功能
 
