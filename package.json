@@ -1,6 +1,6 @@
 {
-  "name": "vue-project",
-  "version": "0.0.0",
+  "name": "pokemondex_vue",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -39,5 +39,10 @@
     "vfonts": "^0.0.3",
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"
-  }
+  },
+  "description": "弋孓的`pokemon dex`只是一个兴趣使然开发的一款宝可梦图鉴.",
+  "main": "index.js",
+  "repository": "https://github.com/YIueil/pokemondex_vue.git",
+  "author": "弋孓 <YIueil@163.com>",
+  "license": "MIT"
 }
