@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format-src": "prettier --write src/",
+    "format-all": "prettier --write ./"
   },
   "dependencies": {
     "pinia": "^2.1.7",
@@ -25,9 +27,11 @@
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.23.0",
     "naive-ui": "^2.39.0",
     "npm-run-all2": "^6.2.0",
+    "prettier": "3.3.3",
     "typescript": "~5.4.0",
     "unplugin-auto-import": "^0.18.2",
     "unplugin-vue-components": "^0.27.4",

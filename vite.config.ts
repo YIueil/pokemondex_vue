@@ -15,12 +15,7 @@ export default defineConfig({
         'vue',
         'pinia',
         {
-          'naive-ui': [
-            'useDialog',
-            'useMessage',
-            'useNotification',
-            'useLoadingBar'
-          ]
+          'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
         }
       ],
       eslintrc: {

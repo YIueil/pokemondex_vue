@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <NButton>按钮</NButton>
@@ -17,6 +15,4 @@
   </n-collapse>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

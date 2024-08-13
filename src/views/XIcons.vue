@@ -10,7 +10,7 @@ import { Icon, IconConfigProvider } from '@vicons/utils'
       <AttachFileRound />
     </Icon>
   </IconConfigProvider>
-  <AttachFileRound style="width: 24px; height: 24px"/>
+  <AttachFileRound style="width: 24px; height: 24px" />
   <Icon size="24" color="#333">
     <FileDownloadRound />
   </Icon>
