@@ -8,30 +8,33 @@ const props = defineProps({
   }
 })
 const route = useRoute()
-console.log(props.keepAlive, route.meta.keepAlive, route.meta)
+
+// 创建一个计算属性来响应式地返回route.meta.keepAlive的值
+const keepAlive = computed(() => route.meta.keepAlive || props.keepAlive)
+
+// 使用watch来侦听路由的变化
+watch(
+  () => route.path, // 侦听route.path的变化
+  (newPath) => {
+    // 当路由变化时，这里可以进行一些操作，比如打印日志等
+    console.log('Route changed:', newPath, keepAlive.value)
+  }
+)
 </script>
 
 <template>
-  <router-view v-slot="{ Component }">
-    <transition
-      enter-active-class="animate__animated animate__slideInUp"
-    >
-      <keep-alive v-if="keepAlive || route.meta.keepAlive">
-        <component :is="Component" :key="route.path" />
+  <router-view v-show="keepAlive" v-slot="{ Component }">
+    <transition enter-active-class="animate__animated animate__fadeInUp">
+      <keep-alive>
+        <component :is="Component" :key="route.fullPath" />
       </keep-alive>
-      <component v-else :is="Component" />
+    </transition>
+  </router-view>
+  <router-view v-show="!keepAlive" v-slot="{ Component }">
+    <transition enter-active-class="animate__animated animate__fadeInUp">
+      <component :is="Component" :key="route.fullPath" />
     </transition>
   </router-view>
 </template>
 
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+<style></style>

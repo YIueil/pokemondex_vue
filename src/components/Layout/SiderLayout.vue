@@ -15,7 +15,7 @@
     <n-layout>
       <n-layout-header>颐和园路</n-layout-header>
       <n-layout-content content-style="padding: 24px;">
-        <router-view />
+        <RouteView />
       </n-layout-content>
       <n-layout-footer>成府路</n-layout-footer>
     </n-layout>

@@ -8,7 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BasicLayout: typeof import('./src/components/Layout/BasicLayout.vue')['default']
-    Layout: typeof import('./src/components/Layout/Layout.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NCollapse: typeof import('naive-ui')['NCollapse']
     NCollapseItem: typeof import('naive-ui')['NCollapseItem']

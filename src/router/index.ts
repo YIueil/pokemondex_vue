@@ -14,43 +14,35 @@ const routes: RouteRecordRaw[] = [
         path: '/home',
         name: 'Home',
         meta: {
-          keepAlive: true,
+          keepAlive: false,
           transition: 'fade'
         },
-        component: () => import('@/views/NativeUIComponent.vue')
-      },
-      {
-        path: '/home2',
-        name: 'Home2',
-        meta: {
-          keepAlive: true,
-          transition: 'fade'
-        },
-        component: () => import('@/views/XIcons.vue')
+        component: () => import('@/views/home/HomePage.vue')
       }
     ]
   },
   {
     path: '/access',
+    redirect: '/access/login',
     component: RouteView,
     children: [
       {
-        path: '/login',
+        path: '/access/login',
         name: 'Login',
-        meta: {
-          keepAlive: true,
-          transition: 'fade'
-        },
-        component: () => import('@/views/access/LoginPage.vue')
-      },
-      {
-        path: '/register',
-        name: 'Register',
         meta: {
           keepAlive: false,
           transition: 'fade'
         },
-        component: () => import('@/views/access/RegisterPage.vue')
+        component: () => import('@/views/access/LoginView.vue')
+      },
+      {
+        path: '/access/register',
+        name: 'Register',
+        meta: {
+          keepAlive: true,
+          transition: 'fade'
+        },
+        component: () => import('@/views/access/RegisterView.vue')
       }
     ]
   }
