@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BasicLayout: typeof import('./src/components/Layout/BasicLayout.vue')['default']
+    Layout: typeof import('./src/components/Layout/Layout.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NCollapse: typeof import('naive-ui')['NCollapse']
     NCollapseItem: typeof import('naive-ui')['NCollapseItem']
@@ -17,6 +18,10 @@ declare module 'vue' {
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
-    NSpace: typeof import('naive-ui')['NSpace']
+    NoSiderLayout: typeof import('./src/components/Layout/NoSiderLayout.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    RouteView: typeof import('./src/components/Layout/RouteView.vue')['default']
+    SiderLayout: typeof import('./src/components/Layout/SiderLayout.vue')['default']
   }
 }

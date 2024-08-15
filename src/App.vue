@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import { useCounterStore } from '@/stores/counter'
-import { toRefs } from 'vue'
-
-const { count, doubleCount, increment } = toRefs(useCounterStore())
 </script>
 
 <template>
-  <div>hello world {{ count }} {{ doubleCount }}</div>
-  <button @click="increment">增加count</button>
   <nav>
-    <RouterLink to="/">Go to Home</RouterLink>
-    <RouterLink to="/about">Go to About</RouterLink>
+    <RouterLink to="/login">Go to Home</RouterLink>
+    <RouterLink to="/register">Go to About</RouterLink>
   </nav>
-  <BasicLayout />
+  <nav>
+    <RouterLink to="/home">Go to home</RouterLink>
+    <RouterLink to="/home2">Go to home2</RouterLink>
+  </nav>
+  <router-view />
 </template>
 
 <style scoped></style>
