@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSettingStore } from '@/stores/setting'
+import { useSettingStore } from '@/stores/application'
 import type { DrawerPlacement } from 'naive-ui'
 
 const { layout } = toRefs(useSettingStore())
@@ -18,8 +18,8 @@ const activate = (place: DrawerPlacement) => {
   </n-button>
   <component :is="layout" />
   <n-drawer v-model:show="showSetting" :width="502" :placement="placement">
-    <n-drawer-content title="斯通纳">
-      《斯通纳》是美国作家约翰·威廉姆斯在 1965 年出版的小说。
+    <n-drawer-content title="全局设置">
+      <ApplicationSetting />
     </n-drawer-content>
   </n-drawer>
 </template>
