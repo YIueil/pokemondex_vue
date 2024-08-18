@@ -1,23 +1,37 @@
-<script setup lang="ts"></script>
+<script lang="ts">
+export default defineComponent({
+  setup() {
+    return {
+      collapsed: ref(false)
+    }
+  }
+})
+</script>
 
 <template>
   <n-layout has-sider>
     <n-layout-sider
-      collapse-mode="width"
-      :collapsed-width="0"
-      :width="240"
-      show-trigger="arrow-circle"
-      content-style="padding: 24px;"
       bordered
+      collapse-mode="width"
+      :collapsed-width="64"
+      :width="240"
+      :collapsed="collapsed"
+      show-trigger
+      @collapse="collapsed = true"
+      @expand="collapsed = false"
     >
-      海淀桥
+      <AppSider :collapsed="collapsed" />
     </n-layout-sider>
     <n-layout>
-      <n-layout-header>颐和园路</n-layout-header>
+      <n-layout-header>
+        <AppHeader />
+      </n-layout-header>
       <n-layout-content content-style="padding: 24px;">
         <RouteView />
       </n-layout-content>
-      <n-layout-footer>成府路</n-layout-footer>
+      <n-layout-footer>
+        <AppFooter />
+      </n-layout-footer>
     </n-layout>
   </n-layout>
 </template>
@@ -30,7 +44,7 @@
 }
 
 .n-layout-sider {
-  background: rgba(128, 128, 128, 0.3);
+  background: rgba(221, 201, 201, 0.3);
 }
 
 .n-layout-content {

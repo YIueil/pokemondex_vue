@@ -45,15 +45,29 @@ const { setThemeMode } = useSettingStore()
       </n-button-group>
     </n-flex>
     <n-divider title-placement="center">布局模式</n-divider>
+    <n-flex vertical>
+      <n-grid x-gap="5" y-gap="10" :cols="2">
+        <n-gi class="pd2" style="margin: 0 auto">
+          <LayoutButton :has-sider="true" :has-footer="true"></LayoutButton>
+        </n-gi>
+        <n-gi class="pd2" style="margin: 0 auto">
+          <LayoutButton :has-sider="true" :has-footer="false"></LayoutButton>
+        </n-gi>
+        <n-gi class="pd2" style="margin: 0 auto">
+          <LayoutButton :has-sider="false" :has-footer="true"></LayoutButton>
+        </n-gi>
+        <n-gi class="pd2" style="margin: 0 auto">
+          <LayoutButton :has-sider="false" :has-footer="false"></LayoutButton>
+        </n-gi>
+      </n-grid>
+    </n-flex>
     <n-divider title-placement="center">主题颜色</n-divider>
     <n-color-picker :modes="['hex']"> <template #label>信息颜色</template> </n-color-picker>
     <n-color-picker :modes="['hex']"> <template #label>警告颜色</template> </n-color-picker>
     <n-color-picker :modes="['hex']"> <template #label>错误颜色</template> </n-color-picker>
     <n-divider title-placement="center">页面功能</n-divider>
     <n-flex vertical align="center">
-      <n-flex class="w-full" justify="space-between">
-        <span>切换动画</span><n-switch />
-      </n-flex>
+      <n-flex class="w-full" justify="space-between"> <span>切换动画</span><n-switch /> </n-flex>
       <n-flex class="w-full" justify="space-between">
         <span>动画效果</span>
         <n-select style="width: 100px" v-model="selectAnimate" :options="options" size="small" />
@@ -82,14 +96,22 @@ const { setThemeMode } = useSettingStore()
       <n-flex class="w-full" justify="space-between">
         <span>顶部宽度</span><n-input-number style="width: 100px" size="small" />
       </n-flex>
+      <n-flex class="w-full" justify="space-between"> <span>底部导航栏</span><n-switch /> </n-flex>
       <n-flex class="w-full" justify="space-between">
-        <span>底部导航栏</span><n-switch />
-      </n-flex>
-      <n-flex class="w-full" justify="space-between">
-        <span>底部宽度</span><n-input-number style="width: 100px" size="small"/>
+        <span>底部宽度</span><n-input-number style="width: 100px" size="small" />
       </n-flex>
     </n-flex>
   </span>
 </template>
 
-<style scoped></style>
+<style scoped>
+.light-green {
+  height: 88px;
+  background-color: rgba(0, 128, 0, 0.12);
+}
+
+.green {
+  height: 88px;
+  background-color: rgba(0, 128, 0, 0.24);
+}
+</style>
