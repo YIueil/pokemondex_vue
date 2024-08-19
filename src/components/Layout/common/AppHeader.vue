@@ -122,14 +122,14 @@ export default defineComponent({
 </script>
 
 <template>
-  <n-space justify="space-between">
+  <n-space class="h-full" :wrap="false" justify="space-between" align="center">
     <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" responsive />
     <n-flex>
-      <n-icon size="48" :component="AppSettingsAltRound" @click="activate('right')" />
-      <n-avatar round :size="48" src="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg" />
+      <n-icon :size="32" :component="AppSettingsAltRound" @click="activate('right')" />
+      <n-avatar round :size="32" src="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg" />
     </n-flex>
   </n-space>
-  <n-drawer v-model:show="showSetting" :width="502" :placement="placement">
+  <n-drawer v-model:show="showSetting" :width="350" :placement="placement">
     <n-drawer-content title="全局设置">
       <ApplicationSetting />
     </n-drawer-content>

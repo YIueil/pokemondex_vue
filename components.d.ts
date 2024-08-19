@@ -12,8 +12,6 @@ declare module 'vue' {
     ApplicationSetting: typeof import('./src/components/Setting/ApplicationSetting.vue')['default']
     AppSider: typeof import('./src/components/Layout/common/AppSider.vue')['default']
     BasicLayout: typeof import('./src/components/Layout/BasicLayout.vue')['default']
-    Footer: typeof import('@/components/Layout/common/AppFooter.vue')['default']
-    Header: typeof import('@/components/Layout/common/AppHeader.vue')['default']
     LayoutButton: typeof import('./src/components/Setting/LayoutButton.vue')['default']
     NAvatar: typeof import('naive-ui')['NAvatar']
     NButton: typeof import('naive-ui')['NButton']
@@ -38,11 +36,9 @@ declare module 'vue' {
     NSelect: typeof import('naive-ui')['NSelect']
     NSpace: typeof import('naive-ui')['NSpace']
     NSwitch: typeof import('naive-ui')['NSwitch']
-    NThemeEditor: typeof import('naive-ui')['NThemeEditor']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     RouteView: typeof import('./src/components/Layout/RouteView.vue')['default']
-    Sider: typeof import('@/components/Layout/common/AppSider.vue')['default']
     SiderLayout: typeof import('./src/components/Layout/SiderLayout.vue')['default']
   }
 }

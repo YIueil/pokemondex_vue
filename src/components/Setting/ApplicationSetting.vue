@@ -104,14 +104,4 @@ const { setThemeMode } = useSettingStore()
   </span>
 </template>
 
-<style scoped>
-.light-green {
-  height: 88px;
-  background-color: rgba(0, 128, 0, 0.12);
-}
-
-.green {
-  height: 88px;
-  background-color: rgba(0, 128, 0, 0.24);
-}
-</style>
+<style scoped></style>
