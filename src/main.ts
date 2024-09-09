@@ -1,4 +1,4 @@
-import './assets/main.css'
+import './assets/style/main.css'
 
 // animate.css 动画库
 import 'animate.css'

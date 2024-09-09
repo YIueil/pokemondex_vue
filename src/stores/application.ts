@@ -3,7 +3,7 @@ import NoSiderLayout from '@/components/Layout/NoSiderLayout.vue'
 
 export const useSettingStore = defineStore('setting', () => {
   // 应用布局
-  const layout = shallowRef(SiderLayout)
+  const layout = shallowRef<typeof SiderLayout | typeof NoSiderLayout>(SiderLayout)
 
   function changeLayout(layoutComponents: typeof SiderLayout | typeof NoSiderLayout) {
     layout.value = layoutComponents
