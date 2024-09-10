@@ -1,7 +1,6 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
-const RouteView = () => import('@/components/Layout/RouteView.vue')
 const BasicLayout = () => import('@/components/Layout/BasicLayout.vue')
 
 const routes: RouteRecordRaw[] = [

@@ -1,4 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { MessageApi } from 'naive-ui'
+
+const message = inject<MessageApi>('$message')
+message?.warning('登录超时, 请重新登录')
+</script>
 
 <template>
   <div class="loginContainer">
@@ -52,6 +57,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
     .formInner {
       width: 80%;
     }
