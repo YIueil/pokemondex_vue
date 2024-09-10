@@ -3,6 +3,7 @@ import type { MessageApi } from 'naive-ui'
 
 const message = inject<MessageApi>('$message')
 message?.warning('登录超时, 请重新登录')
+window.$message?.warning('登录超时, 请重新登录')
 </script>
 
 <template>

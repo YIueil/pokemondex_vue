@@ -32,10 +32,10 @@ export const NaiveUiPlugin = {
     app.provide<ModalApi>('$modal', modal)
 
     // 注册到 window 对象，如果你确实需要这样做
-    // window.$message = message
-    // window.$notification = notification
-    // window.$dialog = dialog
-    // window.$loadingBar = loadingBar
-    // window.$modal = modal
+    window.$message = message
+    window.$notification = notification
+    window.$dialog = dialog
+    window.$loadingBar = loadingBar
+    window.$modal = modal
   }
 }
