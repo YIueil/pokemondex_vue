@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+const router = useRouter()
+function onLogin() {
+  router.push('/access/login')
+}
 </script>
 
 <template>
-  <div>
-    <div>register</div>
-    <input type="text" />
-  </div>
+  <RegisterComponent @on-login="onLogin" />
 </template>
 
 <style scoped></style>

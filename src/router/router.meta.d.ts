@@ -12,7 +12,7 @@ declare module 'vue-router' {
     keepAlive?: boolean
     // 必须登录
     requireLogin?: boolean,
-    // 切换动画名称
+    // 切换动画名称 todo 将animate.css中的作为枚举写入
     transition?: string
   }
 }

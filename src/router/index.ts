@@ -15,7 +15,7 @@ const routes: RouteRecordRaw[] = [
         name: 'Home',
         meta: {
           keepAlive: false,
-          transition: 'fade'
+          transition: 'fadeInUp'
         },
         component: () => import('@/views/home/HomePage.vue')
       }
@@ -24,14 +24,14 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/access',
     redirect: '/access/login',
-    component: RouteView,
+    component: () => import('@/views/access/AccessView.vue'),
     children: [
       {
         path: '/access/login',
         name: 'Login',
         meta: {
           keepAlive: false,
-          transition: 'fade'
+          transition: 'fadeInRight'
         },
         component: () => import('@/views/access/LoginView.vue')
       },
@@ -40,7 +40,7 @@ const routes: RouteRecordRaw[] = [
         name: 'Register',
         meta: {
           keepAlive: true,
-          transition: 'fade'
+          transition: 'fadeInLeft'
         },
         component: () => import('@/views/access/RegisterView.vue')
       }
