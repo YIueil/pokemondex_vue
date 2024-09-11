@@ -38,7 +38,6 @@ declare module 'vue' {
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NMenu: typeof import('naive-ui')['NMenu']
-    NMessageProvider: typeof import('naive-ui')['NMessageProvider']
     NoSiderLayout: typeof import('./src/components/Layout/NoSiderLayout.vue')['default']
     NSelect: typeof import('naive-ui')['NSelect']
     NSpace: typeof import('naive-ui')['NSpace']

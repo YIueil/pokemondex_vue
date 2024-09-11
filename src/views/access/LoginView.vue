@@ -7,6 +7,7 @@ function onRegister() {
 
 function onGuest() {
   console.log('guest')
+  router.push('/home')
 }
 </script>
 
