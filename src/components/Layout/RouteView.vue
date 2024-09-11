@@ -27,17 +27,22 @@ watch(
 
 <template>
   <router-view v-show="keepAlive" v-slot="{ Component }">
-    <transition :enter-active-class="transition">
+    <transition mode="out-in" :enter-active-class="transition" leave-active-class="animate__animated animate__fadeOut">
       <keep-alive>
         <component :is="Component" :key="route.fullPath" />
       </keep-alive>
     </transition>
   </router-view>
   <router-view v-show="!keepAlive" v-slot="{ Component }">
-    <transition :enter-active-class="transition">
+    <transition mode="out-in" :enter-active-class="transition" leave-active-class="animate__animated animate__fadeOut">
       <component :is="Component" :key="route.fullPath" />
     </transition>
   </router-view>
 </template>
 
-<style></style>
+<style scoped>
+/*淡出动画时间*/
+.animate__animated.animate__fadeOut {
+  --animate-duration: 0.25s;
+}
+</style>

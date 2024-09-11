@@ -17,6 +17,15 @@ const routes: RouteRecordRaw[] = [
           transition: 'fadeInUp'
         },
         component: () => import('@/views/home/HomePage.vue')
+      },
+      {
+        path: '/about',
+        name: 'About',
+        meta: {
+          keepAlive: false,
+          transition: 'fadeInDown'
+        },
+        component: () => import('@/views/AboutView.vue')
       }
     ]
   },
