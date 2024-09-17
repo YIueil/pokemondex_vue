@@ -13,15 +13,47 @@ const routes: RouteRecordRaw[] = [
         path: '/home',
         name: 'Home',
         meta: {
+          title: '首页',
           keepAlive: false,
           transition: 'fadeInUp'
         },
         component: () => import('@/views/home/HomePage.vue')
       },
       {
+        path: '/component',
+        name: 'CustomComponent',
+        redirect: '/component/component1',
+        meta: {
+          title: '自定义组件'
+        },
+        children: [
+          {
+            path: '/component/component1',
+            name: 'Component1',
+            meta: {
+              title: '自定义组件1',
+              keepAlive: false,
+              transition: 'fadeInDown'
+            },
+            component: () => import('@/views/component/Component1.vue')
+          },
+          {
+            path: '/component/component2',
+            name: 'Component2',
+            meta: {
+              title: '自定义组件2',
+              keepAlive: false,
+              transition: 'fadeInDown'
+            },
+            component: () => import('@/views/component/Component2.vue')
+          }
+        ]
+      },
+      {
         path: '/about',
         name: 'About',
         meta: {
+          title: '关于',
           keepAlive: false,
           transition: 'fadeInDown'
         },
@@ -38,6 +70,7 @@ const routes: RouteRecordRaw[] = [
         path: '/access/login',
         name: 'Login',
         meta: {
+          title: '登录',
           keepAlive: false,
           transition: 'fadeInRight'
         },
@@ -47,6 +80,7 @@ const routes: RouteRecordRaw[] = [
         path: '/access/register',
         name: 'Register',
         meta: {
+          title: '注册',
           keepAlive: true,
           transition: 'fadeInLeft'
         },

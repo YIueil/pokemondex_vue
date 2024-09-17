@@ -8,10 +8,12 @@ export {}
 
 declare module 'vue-router' {
   interface RouteMeta {
+    // 组件面包屑名称
+    title: string
     // 组件缓存
     keepAlive?: boolean
     // 必须登录
-    requireLogin?: boolean,
+    requireLogin?: boolean
     // 切换动画名称 todo 将animate.css中的作为枚举写入
     transition?: string
   }

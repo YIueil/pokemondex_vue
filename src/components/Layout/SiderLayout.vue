@@ -64,15 +64,15 @@ export default defineComponent({
 
 .n-layout-header,
 .n-layout-footer {
-  background: rgba(128, 128, 128, 0.2);
+  //background: rgba(128, 128, 128, 0.2);
   padding: 24px;
 }
 
 .n-layout-sider {
-  background: rgba(221, 201, 201, 0.3);
+  //background: rgba(221, 201, 201, 0.3);
 }
 
 .n-layout-content {
-  background: rgba(128, 128, 128, 0.4);
+  //background: rgba(128, 128, 128, 0.4);
 }
 </style>
