@@ -112,12 +112,12 @@ const menuOptions: MenuOption[] = [
     icon: renderIcon(EditNoteOutlined),
     children: [
       {
-        label: '富文本编辑器',
+        label: renderRouterLink('RichTextComponent', '富文本编辑器'),
         key: 'rich-text-editor',
         icon: renderIcon(MenuOutlined)
       },
       {
-        label: 'MarkDown',
+        label: renderRouterLink('MarkdownComponent', 'Markdown'),
         key: 'markdown-editor',
         icon: renderIcon(MenuOutlined)
       }

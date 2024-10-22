@@ -50,6 +50,36 @@ const routes: RouteRecordRaw[] = [
         ]
       },
       {
+        path: '/editor',
+        name: 'EditorComponent',
+        redirect: '/editor/richText',
+        meta: {
+          title: '自定义组件'
+        },
+        children: [
+          {
+            path: '/editor/richText',
+            name: 'RichTextComponent',
+            meta: {
+              title: '富文本编辑器',
+              keepAlive: false,
+              transition: 'fadeInDown'
+            },
+            component: () => import('@/views/component/Component1.vue')
+          },
+          {
+            path: '/editor/markdown',
+            name: 'MarkdownComponent',
+            meta: {
+              title: 'Markdown',
+              keepAlive: false,
+              transition: 'fadeInDown'
+            },
+            component: () => import('@/views/component/editor/MarkDownEditorComponent.vue')
+          }
+        ]
+      },
+      {
         path: '/about',
         name: 'About',
         meta: {

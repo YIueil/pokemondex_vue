@@ -15,7 +15,6 @@ declare module 'vue' {
     BasicLayout: typeof import('./src/components/Layout/BasicLayout.vue')['default']
     LayoutButton: typeof import('./src/components/Setting/LayoutButton.vue')['default']
     LoginComponent: typeof import('./src/components/Login/LoginComponent.vue')['default']
-    Logo: typeof import('@/components/Logo/AppLogo.vue')['default']
     NAvatar: typeof import('naive-ui')['NAvatar']
     NBreadcrumb: typeof import('naive-ui')['NBreadcrumb']
     NBreadcrumbItem: typeof import('naive-ui')['NBreadcrumbItem']
@@ -51,5 +50,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     RouteView: typeof import('./src/components/Layout/RouteView.vue')['default']
     SiderLayout: typeof import('./src/components/Layout/SiderLayout.vue')['default']
+    Vditor: typeof import('./src/components/Markdown/Vditor.vue')['default']
   }
 }
